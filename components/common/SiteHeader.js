@@ -9,7 +9,6 @@ const SiteHeader = ({ globalData, sitemapNode, page }) => {
   // open / close mobile nav
   const [open, setOpen] = useState(false);
 
-
   if (!header) {
     return (
       <header className="relative p-8 text-center">
@@ -19,14 +18,14 @@ const SiteHeader = ({ globalData, sitemapNode, page }) => {
   }
 
   return (
-    <header className="relative w-full mx-auto bg-white px-8">
+    <header className="Custom-Header">
       <div className="max-w-screen-xl mx-auto">
         <div className="flex justify-between items-center py-6 md:justify-start md:space-x-10">
           <div className="lg:w-0 lg:flex-1">
             <Link href="/">
               <a className="flex items-center">
                 <img
-                  className="h-14 sm:h-20 w-auto z-50"
+                  className="Custom-header-image"
                   src={header.logo.url}
                   alt={header.logo.label}
                   title={header.logo.siteName}
@@ -65,9 +64,7 @@ const SiteHeader = ({ globalData, sitemapNode, page }) => {
             {header.links.map((navitem, index) => {
               return (
                 <Link href={navitem.path} key={`mobile-${index}`}>
-                  <a className="text-base leading-6 font-medium text-secondary-500 hover:text-primary-500 border-transparent border-b-2 hover:border-primary-500 hover:border-b-primary hover:border-b-2 focus:outline-none focus:text-primary-500 transition duration-300">
-                    {navitem.title}
-                  </a>
+                  <a className="Custom-nav-links">{navitem.title}</a>
                 </Link>
               );
             })}
@@ -168,7 +165,7 @@ SiteHeader.getCustomInitialProps = async function ({
     let header = await api.getContentList({
       referenceName: "siteheader",
       languageCode: languageCode,
-	  take: 1
+      take: 1,
     });
 
     // if we have a header, set as content item

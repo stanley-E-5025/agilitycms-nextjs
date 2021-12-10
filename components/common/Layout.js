@@ -12,13 +12,8 @@ import LoadingWidget from "./LoadingWidget";
 const isPreview = handlePreview();
 
 function Layout(props) {
-  const {
-    page,
-    sitemapNode,
-    dynamicPageItem,
-    notFound,
-    pageTemplateName,
-  } = props;
+  const { page, sitemapNode, dynamicPageItem, notFound, pageTemplateName } =
+    props;
 
   // If the page is not yet generated, this will be displayed
   // initially until getStaticProps() finishes running
@@ -53,7 +48,7 @@ function Layout(props) {
             <PreviewBar {...props} />
             <div className="flex flex-col min-h-screen">
               <SiteHeader {...props} />
-              <main className="flex-grow">
+              <main className="flex-grow Custom-body">
                 <AgilityPageTemplate {...props} />
               </main>
               <SiteFooter {...props} />

@@ -1,11 +1,10 @@
 import React from "react";
 import Link from "next/link";
-import { AgilityImage } from "@agility/nextjs"
+import { AgilityImage } from "@agility/nextjs";
 
 const PostsListing = ({ module, customData }) => {
   // get posts
   const { posts } = customData;
-
 
   // if there are no posts, display message on frontend
   if (posts.length <= 0) {
@@ -39,17 +38,12 @@ const PostsListing = ({ module, customData }) => {
                       layout="fill"
                     />
                   </div>
-                  <div className="bg-gray-100 p-8 border-2 border-t-0 rounded-b-lg">
-                    <div className="uppercase text-primary-500 text-xs font-bold tracking-widest leading-loose">
-                      {post.category}
-                    </div>
-                    <div className="border-b-2 border-primary-500 w-8"></div>
+                  <div className="">
+                    <div className="Custom-tag ">{post.category}</div>
                     <div className="mt-4 uppercase text-gray-600 italic font-semibold text-xs">
                       {post.date}
                     </div>
-                    <h2 className="text-secondary-500 mt-1 font-black text-2xl group-hover:text-primary-500 transition duration-300">
-                      {post.title}
-                    </h2>
+                    <h2 className="Custom-tag-title">{post.title}</h2>
                   </div>
                 </div>
               </a>
@@ -93,9 +87,9 @@ PostsListing.getCustomInitialProps = async ({
     let rawPosts = await api.getContentList({
       referenceName: "posts",
       languageCode,
-	  contentLinkDepth: 2,
-	  depth: 2,
-	  take: 50
+      contentLinkDepth: 2,
+      depth: 2,
+      take: 50,
     });
 
     // resolve dynamic urls
@@ -103,7 +97,7 @@ PostsListing.getCustomInitialProps = async ({
 
     const posts = rawPosts.items.map((post) => {
       //category
-      const category = post.fields.category?.fields.title || "Uncategorized"
+      const category = post.fields.category?.fields.title || "Uncategorized";
 
       // date
       const date = new Date(post.fields.date).toLocaleDateString();

@@ -1,5 +1,5 @@
 import React from "react";
-import { AgilityImage } from "@agility/nextjs"
+import { AgilityImage } from "@agility/nextjs";
 import Link from "next/link";
 
 const TextBlockWithImage = ({ module }) => {
@@ -16,9 +16,7 @@ const TextBlockWithImage = ({ module }) => {
     if (isUrlAbsolute(url) === false) {
       return (
         <Link href={url} title={text} target={target}>
-          <a className="inline-block mt-8 md:mt-8 px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-primary-500 hover:bg-primary-700 focus:outline-none focus:border-primary-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150">
-            {text}
-          </a>
+          <a className="Custom-link-button">{text}</a>
         </Link>
       );
     } else {
@@ -69,16 +67,10 @@ const TextBlockWithImage = ({ module }) => {
         >
           <div className="g:py-8 text-center md:text-left">
             {fields.tagline && (
-              <span className="font-bold text-primary-500 text-sm text-center md:text-left uppercase">
-                {fields.tagline}
-              </span>
+              <span className="Custom-Tile">{fields.tagline}</span>
             )}
-            <h2 className="font-display text-4xl font-black text-secondary-500 md:text-3xl lg:text-5xl tracking-wide text-center mt-4 lg:leading-tight md:text-left">
-              {fields.title}
-            </h2>
-            <p className="mt-4 text-center md:text-left text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-200">
-              {fields.content}
-            </p>
+            <h3 className="Custom-post-title">{fields.title}</h3>
+            <p className="Custom-text-content">{fields.content}</p>
             {fields.primaryButton &&
               generateLink(
                 fields.primaryButton.href,

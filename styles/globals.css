@@ -20,3 +20,73 @@
 .prose blockquote {
   color: #243e63;
 }
+.Custom-header-image {
+  height: 45px;
+}
+
+.Custom-nav-links {
+  color: #fff;
+  font-weight: bold;
+}
+
+.Custom-nav-links:hover {
+  color: #ffffff91;
+  font-weight: bold;
+}
+
+.Custom-link-button {
+  position: absolute;
+  bottom: 20px;
+  color: #de5b15;
+  font-weight: bold;
+}
+
+.Custom-Tile {
+  color: #de5b15;
+  font-weight: bold;
+}
+
+.Custom-post-title {
+  font-weight: bold;
+  color: #fff;
+}
+
+.Custom-Header {
+  background: #333;
+  height: 80px;
+}
+
+.Custom-body {
+  background: #202020;
+}
+.footer {
+  background: #202020;
+}
+.Custom-text-content {
+  color: #ffffffc9;
+  font-family: "Public Sans", sans-serif;
+}
+
+.Custom-Title {
+  color: #fff;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.Custom-tag {
+  color: #de5b15;
+  font-weight: bold;
+}
+
+.Custom-tag-title {
+  color: #fff;
+  font-weight: bold;
+}
+
+.custom-title {
+  color: #fff;
+}
+.custom-video {
+  border-radius: 10px;
+  border: solid 1px #0f0f0f85;
+}

@@ -3,6 +3,7 @@ import FeaturedPost from "./FeaturedPost";
 import PostsListing from "./PostsListing";
 import PostDetails from "./PostDetails";
 import Heading from "./Heading";
+import CustomModule from "./CustomModule";
 import TextBlockWithImage from "./TextBlockWithImage";
 
 // All of the Agility Page Module Components that are in use in this site need to be imported into this index file.
@@ -15,6 +16,7 @@ const allModules = [
   { name: "PostsListing", module: PostsListing },
   { name: "PostDetails", module: PostDetails },
   { name: "RichTextArea", module: RichTextArea },
+  { name: "CustomModule", module: CustomModule },
 ];
 
 export const getModule = (moduleName) => {
