@@ -23,7 +23,7 @@
     "react-youtube": "^7.13.1"
   },
   "devDependencies": {
-    "@agility/content-fetch": "^1.1.1",
+    "@agility/content-fetch": "^1.1.2",
     "@agility/content-sync": "^1.0.3",
     "@agility/nextjs": "^0.4.1",
     "@tailwindcss/typography": "^0.4.1",

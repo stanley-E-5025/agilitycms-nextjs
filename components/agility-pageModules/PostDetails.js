@@ -1,6 +1,6 @@
 import React from "react";
 import { renderHTML } from "@agility/nextjs";
-import { AgilityImage } from "@agility/nextjs"
+import { AgilityImage } from "@agility/nextjs";
 
 const PostDetails = ({ dynamicPageItem }) => {
   // post fields
